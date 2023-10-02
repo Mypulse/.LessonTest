@@ -21,7 +21,7 @@
 import random
 cluster = int(input("введите количество кустов: "))
 berry = list(random.randint(0, 10) for i in range(cluster))
-result = []
+output = []
 total = 0
 i = 0
 
@@ -33,8 +33,8 @@ while i < cluster:
         total = berry[i] + berry[i - 1] + berry[0]
     else:
         total = berry[i] + berry[i - 1] + berry[i + 1]
-        result.append(total)
-        result.sort()
+        output.append(total)
+        output.sort()
     i += 1
 
-print(f"максимальное колличество ягод {result[-1]}")
+print(f'максимальное колличество ягод {output[-1]}')
